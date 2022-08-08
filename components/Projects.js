@@ -4,7 +4,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="bg-gradient-to-b pt-24 pb-12 from-accentLight to-accentDark w-full"
+      className="bg-gradient-to-b pt-40 pb-20 from-accentLight to-accentDark w-full"
     >
       <div className="min-h-screen h-full mx-auto w-full max-w-7xl text-white">
         <div className="flex flex-col gap-y-5">

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-b pt-24 pb-12 from-accentDark to-accentLight w-full">
+    <section className="bg-gradient-to-b pt-40 pb-20 from-accentDark to-accentLight w-full">
       <div className="min-h-screen h-full w-full max-w-7xl flex items-center justify-between mx-auto">
         <div className="flex text-white flex-col gap-y-10">
           <div className="text-6xl font-bold">

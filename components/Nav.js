@@ -8,9 +8,9 @@ export default function Nav() {
           <Image alt="nav-brand" src={"/icons/HA.svg"} width={60} height={60} />
         </div>
         <div className="capitalize text-base flex gap-x-[5.35vw]">
-          <span>Projects</span>
-          <span>About me</span>
-          <span>Contact</span>
+          <a href="#">Projects</a>
+          <a href="#">About me</a>
+          <a href="#">Contact</a>
         </div>
       </div>
     </nav>

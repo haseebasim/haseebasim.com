@@ -1,12 +1,14 @@
+import Section from "./Section";
+
 /* eslint-disable react/no-unescaped-entities */
 export default function Experience() {
   return (
-    <section className="bg-gradient-to-b pt-40 pb-20 from-accentDark to-accentLight w-full">
-      <div className="text-white w-full max-w-7xl h-full min-h-screen mx-auto">
-        <p className="mb-5 font-bold text-4xl">Experience</p>
-        <p className="text-2xl">Where I've worked</p>
-        <div className="mt-[130px] flex gap-x-5 items-start mx-auto w-[74.6vw]">
-          <div>
+    <Section minHeight={false}>
+      <div className="lg:py-20 xl:py-24">
+        <p className="mb-5 font-bold text-3xl sm:text-4xl">Experience</p>
+        <p className="text-xl sm:text-2xl">Where I've worked</p>
+        <div className="mt-10 lg:mt-[100px] flex lg:flex-row flex-col gap-x-5 gap-y-5 items-start mx-auto xl:w-5/6 ">
+          <div className="flex lg:flex-col flex-row justify-between w-full overflow-x-scroll ">
             <Tab active={true} company={"Upwork"} />
             <Tab active={false} company={"RipeSeed"} />
             <Tab active={false} company={"Robor"} />
@@ -18,25 +20,25 @@ export default function Experience() {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 
 const Tab = ({ active, company }) => {
   return (
     <div
-      className={`h-[60px] text-xl flex items-center w-[300px] border-l-[5px] ${
+      className={`h-[60px] text-xl flex items-center justify-center lg:justify-start text-center min-w-[120px] sm:w-[300px] border-b-[5px] lg:border-b-0 lg:border-l-[5px] ${
         active ? "border-primary" : "border-white"
       } `}
     >
-      <span className="ml-4">{company}</span>
+      <span className="lg:ml-4">{company}</span>
     </div>
   );
 };
 
 const TabSection = () => {
   return (
-    <div className="text-xl">
+    <div className="text-lg sm:text-xl">
       <div className="mt-2.5">
         <p className="text-primary">
           Full Stack Developer @ <span className="font-bold">Upwork</span>

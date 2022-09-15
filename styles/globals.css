@@ -6,8 +6,10 @@
   html,
   body {
     font-family: "Open Sans";
+    scroll-behavior: smooth;
   }
 }
+
 
 body {
   position: relative;

@@ -1,44 +1,45 @@
 import Image from "next/image";
+import Section from "./Section";
 
 export default function Tools() {
   return (
-    <section className="bg-gradient-to-b pt-40 pb-20 from-accentLight to-accentDark w-full">
-      <div className="w-full mx-auto text-white max-w-7xl h-full min-h-screen">
-        <p className="font-bold text-4xl">Tools and technologies that I use</p>
-        <div className="mt-24 flex flex-wrap flex-row  gap-x-12 gap-y-12">
-          <ToolCard />
-          <ToolCard />
-          <ToolCard />
-          <ToolCard />
-          <ToolCard />
-          <ToolCard />
-          <ToolCard />
-          <ToolCard />
-          <ToolCard />
-          <ToolCard />
-          <ToolCard />
-          <ToolCard />
-          <ToolCard />
-          <ToolCard />
-          <ToolCard />
-          <ToolCard />
-          <ToolCard />
-          <ToolCard />
-          <ToolCard />
-        </div>
+    <Section minHeight={false} reverseBg={true}>
+      <p className="font-bold text-3xl  sm:text-4xl">
+        Tools and technologies that I use
+      </p>
+      <div className="mt-24 flex flex-wrap justify-center sm:justify-start flex-row gap-x-4 sm:gap-x-12 gap-y-12">
+        <ToolCard />
+        <ToolCard />
+        <ToolCard />
+        <ToolCard />
+        <ToolCard />
+        <ToolCard />
+        <ToolCard />
+        <ToolCard />
+        <ToolCard />
+        <ToolCard />
+        <ToolCard />
+        <ToolCard />
+        <ToolCard />
+        <ToolCard />
+        <ToolCard />
+        <ToolCard />
+        <ToolCard />
+        <ToolCard />
+        <ToolCard />
       </div>
-    </section>
+    </Section>
   );
 }
 
 const ToolCard = () => {
   return (
-    <div className="relative p-2 rounded-[20px] flex flex-col  items-center bg-white bg-opacity-[0.06] w-[114px] h-[104px]">
+    <div className="relative p-2 rounded-[20px] flex flex-col  items-center bg-white bg-opacity-[0.06] w-[104px] h-[94px]">
       <Image
         src={"/images/cf.png"}
         alt="cf"
-        width={64}
-        height={64}
+        width={48}
+        height={48}
         layout="intrinsic"
       />
       <p className="text-sm break-words text-center">Cloud Formation</p>

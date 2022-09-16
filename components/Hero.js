@@ -5,17 +5,17 @@ export default function Hero() {
   return (
     <>
       <Section minHeight={false}>
-        <div className="flex justify-center items-center py-40 lg:py-10 xl:py-0">
-          <div className="flex lg:w-2/4 lg:text-start text-center lg:items-start items-center  text-white flex-col gap-y-5">
+        <div className="flex  justify-between items-center py-36 xl:py-16">
+          <div className="flex sm:w-2/4 sm:text-start text-center sm:items-start items-center  text-white flex-col gap-y-5">
             <div className=" font-bold">
               <p className="text-3xl sm:text-5xl lg:text-4xl xl:text-5xl mb-2">
                 Hi, I am <span className="text-primary">Haseeb Asim</span>
               </p>
-              <p className="text-2xl sm:text-4xl lg:text-3xl xl:text-4xl">
+              <p className="text-2xl sm:text-3xl xl:text-4xl">
                 Full Stack Developer
               </p>
             </div>
-            <p className="text-lg xl:text-2xl font-semibold">
+            <p className="text-lg xl:text-2xl font-normal">
               I help businesses and companies reach their goals by designing
               user-centric digital products & interactive experiences.
             </p>
@@ -50,8 +50,8 @@ export default function Hero() {
               </a>
             </div>
           </div>
-          <div className="lg:block hidden relative w-[500px] h-[500px] xl:w-[750px] xl:h-[750px]">
-            <Image src={"/images/hero-boy.png"} alt="hero-img" layout="fill" />
+          <div className="sm:block hidden relative w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px]">
+            <Image src={"/images/hero-img.png"} alt="hero-img" layout="fill" />
           </div>
         </div>
       </Section>

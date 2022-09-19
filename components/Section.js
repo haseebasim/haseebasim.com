@@ -8,19 +8,13 @@ export default function Section({
   return (
     <section
       id={id}
-      className={`px-5 sm:px-10 xl:px-0 bg-gradient-to-b ${pt && "pt-24"} w-full ${
+      className={`p-5 sm:p-10 bg-gradient-to-b ${
         reverseBg
           ? "from-accentLight to-accentDark"
           : "from-accentDark to-accentLight"
-      }`}
+      } ${minHeight && "min-h-screen"} h-full flex items-center `}
     >
-      <div
-        className={`${
-          minHeight && "min-h-screen"
-        } w-full h-full max-w-7xl mx-auto text-white`}
-      >
-        {children}
-      </div>
+      <div className={`w-full max-w-7xl mx-auto text-white`}>{children}</div>
     </section>
   );
 }

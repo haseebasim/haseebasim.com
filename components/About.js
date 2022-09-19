@@ -33,7 +33,7 @@ export default function About() {
             there's something I don't know, I'll figure out how to learn it.
           </p>
         </div>
-        <div className="relative w-[253px] h-[395px] sm:w-[453px] sm:h-[595px]">
+        <div className="relative w-[253px] h-[355px] sm:w-[353px] sm:h-[453px] lg:w-[453px] lg:h-[595px]">
           <Image src={"/images/about_img.png"} alt="Me" layout="fill" />
         </div>
       </div>

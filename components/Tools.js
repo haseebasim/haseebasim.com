@@ -7,7 +7,7 @@ export default function Tools() {
       <p className="font-bold text-3xl  sm:text-4xl">
         Tools and technologies that I use
       </p>
-      <div className="mt-24 flex flex-wrap justify-center sm:justify-start flex-row gap-x-4 sm:gap-x-12 gap-y-12">
+      <div className="mt-24 flex flex-wrap justify-center mx-auto flex-row gap-x-4 sm:gap-x-12 gap-y-12">
         <ToolCard />
         <ToolCard />
         <ToolCard />

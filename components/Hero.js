@@ -4,8 +4,8 @@ import Section from "./Section";
 export default function Hero() {
   return (
     <>
-      <Section minHeight={false}>
-        <div className="flex  justify-between items-center py-36 xl:py-16">
+      <Section>
+        <div className="flex justify-between items-center py-36 xl:py-16">
           <div className="flex sm:w-2/4 sm:text-start text-center sm:items-start items-center  text-white flex-col gap-y-5">
             <div className=" font-bold">
               <p className="text-3xl sm:text-5xl lg:text-4xl xl:text-5xl mb-2">

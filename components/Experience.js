@@ -7,8 +7,8 @@ export default function Experience() {
       <div className="lg:py-20 xl:py-24">
         <p className="mb-5 font-bold text-3xl sm:text-4xl">Experience</p>
         <p className="text-xl sm:text-2xl">Where I've worked</p>
-        <div className="mt-10 lg:mt-[100px] flex lg:flex-row flex-col gap-x-5 gap-y-5 items-start mx-auto xl:w-5/6 ">
-          <div className="flex lg:flex-col flex-row justify-between w-full overflow-x-scroll ">
+        <div className="mt-10 lg:mt-[100px] flex lg:flex-row w-full flex-col lg:gap-x-20 gap-y-5 items-start mx-auto xl:w-5/6 ">
+          <div className="flex flex-row lg:flex-col overflow-x-scroll w-full lg:w-auto lg:overflow-hidden">
             <Tab active={true} company={"Upwork"} />
             <Tab active={false} company={"RipeSeed"} />
             <Tab active={false} company={"Robor"} />
@@ -27,7 +27,7 @@ export default function Experience() {
 const Tab = ({ active, company }) => {
   return (
     <div
-      className={`h-[60px] text-xl flex items-center justify-center lg:justify-start text-center min-w-[120px] sm:w-[300px] border-b-[5px] lg:border-b-0 lg:border-l-[5px] ${
+      className={`border-b-2 lg:border-b-0 lg:border-l-2 flex justify-center lg:justify-start items-end lg:items-center w-full min-w-[120px] lg:w-[300px] lg:pl-5 h-[60px] text-xl  text-center ${
         active ? "border-primary" : "border-white"
       } `}
     >

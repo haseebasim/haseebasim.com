@@ -19,8 +19,8 @@ export default function Document() {
           name="description"
           content="A Full Stack Developer, developing exceptional digital experiences with a touch of the cloud."
         />
+        <title>Haseeb Asim</title>
       </Head>
-      <title>Haseeb Asim</title>
       <body>
         <Main />
         <NextScript />

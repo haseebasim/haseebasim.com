@@ -10,7 +10,7 @@ export default function About() {
         <div className="flex flex-col gap-y-5 text-lg">
           <p>My name is Haseeb Asim</p>
           <p>
-            I’m from Lahore, Pakistan.I have a Bachelor degree in Computer
+            I’m based in Lahore, Pakistan. I have a Bachelor degree in Computer
             Science from National University of Sciences and Technology (NUST).
             Always have been in love with technology and it's all possibilities.
           </p>
@@ -22,7 +22,7 @@ export default function About() {
             Developer.
           </p>
           <p>
-            Currently I am freelance developer and have had the privileged of
+            Currently I am a freelance developer and have had the privilege of
             working with really amazing clients. My main focus these days is to
             grow my skill and help my clients in building accessible, inclusive
             products and digital experiences.
@@ -30,7 +30,7 @@ export default function About() {
           <p className="italic font-bold text-primary">
             I am a dedicated individual who is intrigued and eager to constantly
             provide my best effort to whatever task is assigned to me. If
-            there's something I don't know, I'll figure out how to learn it.
+            there's something I don't know, I'll just learn it.
           </p>
         </div>
         <div className="relative w-[253px] h-[355px] sm:w-[353px] sm:h-[453px] lg:w-[453px] lg:h-[595px]">

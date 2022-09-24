@@ -8,7 +8,7 @@ export default function Section({
   return (
     <section
       id={id}
-      className={`p-5 sm:p-10 bg-gradient-to-b ${
+      className={`section-container p-5 sm:p-10 bg-gradient-to-b ${
         reverseBg
           ? "from-accentLight to-accentDark"
           : "from-accentDark to-accentLight"

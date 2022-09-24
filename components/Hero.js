@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <>
       <Section>
-        <div className="flex justify-between items-center py-36 xl:py-16">
+        <div className="hero-container flex justify-between items-center py-36 xl:py-16">
           <div className="flex sm:w-2/4 sm:text-start text-center sm:items-start items-center  text-white flex-col gap-y-5">
             <div className=" font-bold">
               <p className="text-3xl sm:text-5xl lg:text-4xl xl:text-5xl mb-2">
@@ -15,13 +15,13 @@ export default function Hero() {
                 Full Stack Developer
               </p>
             </div>
-            <p className="text-lg xl:text-2xl font-normal">
-              I help businesses and companies reach their goals by designing
-              user-centric digital products & interactive experiences.
+            <p className="text-lg xl:text-xl font-normal">
+              I am a Full Stack Developer, developing exceptional digital
+              experiences with a touch of the cloud.
             </p>
             <a
               className="w-[236px] font-semibold text-black h-[50px] bg-white flex items-center rounded justify-center gap-x-2"
-              href="mailto:haseebzaidi321@gmail.com"
+              href="mailto:haseebzaidi321@gmail.com?subject=Hi"
             >
               <Image
                 src={"/icons/email_icon.svg"}
@@ -32,7 +32,11 @@ export default function Hero() {
               <span>haseebzaidi321@gmail</span>
             </a>
             <div className="flex gap-x-4">
-              <a href="">
+              <a
+                href="https://github.com/haseebasim"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Image
                   src={"/icons/github_icon.svg"}
                   alt=""
@@ -40,7 +44,11 @@ export default function Hero() {
                   width={32}
                 />
               </a>
-              <a href="">
+              <a
+                href="https://www.linkedin.com/in/haseebrz/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Image
                   src={"/icons/linkedin_icon.svg"}
                   alt=""

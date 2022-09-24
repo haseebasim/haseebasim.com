@@ -7,7 +7,7 @@ export default function Experience({ experience }) {
 
   return (
     <Section minHeight={false}>
-      <div className="lg:py-20 xl:py-24">
+      <div>
         <p className="mb-5 font-bold text-3xl sm:text-4xl">Experience</p>
         <p className="text-xl sm:text-2xl">Where I've worked</p>
         <div className="mt-10 lg:mt-[100px] flex lg:flex-row w-full flex-col lg:gap-x-20 gap-y-5 items-start mx-auto xl:w-5/6 ">

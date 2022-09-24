@@ -2,7 +2,7 @@ import Section from "./Section";
 
 export default function Tools({ tools }) {
   return (
-    <Section minHeight={false} reverseBg={true}>
+    <Section reverseBg={true} minHeight={false}>
       <p className="font-bold text-3xl  sm:text-4xl">
         Tools and technologies that I use
       </p>

@@ -1,14 +1,8 @@
-export default function Section({
-  children,
-  id,
-  reverseBg,
-  minHeight = true,
-  pt = true,
-}) {
+export default function Section({ children, id, reverseBg, minHeight = true ,p=true}) {
   return (
     <section
       id={id}
-      className={`section-container p-5 sm:p-10 bg-gradient-to-b ${
+      className={`section-container px-5 sm:px-10 xl:px-0 py-20 xl:py-40 bg-gradient-to-b ${
         reverseBg
           ? "from-accentLight to-accentDark"
           : "from-accentDark to-accentLight"

@@ -5,7 +5,7 @@ import Section from "./Section";
 export default function About() {
   return (
     <Section id={"about"}>
-      <p className="text-3xl sm:text-4xl font-bold mb-10">About Me</p>
+      <p className="text-3xl sm:text-4xl  font-bold mb-10">About Me</p>
       <div className="grid gap-y-10 lg:grid-cols-2 w-full items-center justify-items-center lg:justify-items-end">
         <div className="flex flex-col gap-y-5 text-lg">
           <p>My name is Haseeb Asim</p>

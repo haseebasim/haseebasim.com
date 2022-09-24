@@ -11,6 +11,7 @@ export default function Footer() {
           rel="noreferrer"
         >
           <Image
+            loading="lazy"
             src={"/icons/email_link_icon.svg"}
             alt=""
             height={32}
@@ -22,7 +23,13 @@ export default function Footer() {
           target="_blank"
           rel="noreferrer"
         >
-          <Image src={"/icons/github_icon.svg"} alt="" height={32} width={32} />
+          <Image
+            loading="lazy"
+            src={"/icons/github_icon.svg"}
+            alt=""
+            height={32}
+            width={32}
+          />
         </a>
         <a
           href="https://www.linkedin.com/in/haseebrz/"
@@ -30,6 +37,7 @@ export default function Footer() {
           rel="noreferrer"
         >
           <Image
+            loading="lazy"
             src={"/icons/linkedin_icon.svg"}
             alt=""
             height={32}

@@ -24,6 +24,7 @@ export default function Hero() {
               href="mailto:haseebzaidi321@gmail.com?subject=Hi"
             >
               <Image
+                loading="lazy"
                 src={"/icons/email_icon.svg"}
                 alt=""
                 height={20}
@@ -38,6 +39,7 @@ export default function Hero() {
                 rel="noreferrer"
               >
                 <Image
+                  loading="lazy"
                   src={"/icons/github_icon.svg"}
                   alt=""
                   height={32}
@@ -50,6 +52,7 @@ export default function Hero() {
                 rel="noreferrer"
               >
                 <Image
+                  loading="lazy"
                   src={"/icons/linkedin_icon.svg"}
                   alt=""
                   height={32}
@@ -59,7 +62,12 @@ export default function Hero() {
             </div>
           </div>
           <div className="sm:block hidden relative w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px]">
-            <Image src={"/images/hero-img.png"} alt="hero-img" layout="fill" />
+            <Image
+              loading="lazy"
+              src={"/images/hero-img.png"}
+              alt="hero-img"
+              layout="fill"
+            />
           </div>
         </div>
       </Section>

@@ -7,7 +7,7 @@ export default function ProjectCard({ project }) {
   return (
     <div className=" w-[320px] max-h-[515px] min-h-[515px] flex flex-col  card-box-shadow rounded-[20px] bg-white bg-opacity-[0.07]">
       <div className="relative w-full h-[220px]">
-        <Image
+        <Image loading="lazy"
           className="rounded-t-[20px]"
           {...imageProps}
           alt="project img"
@@ -31,7 +31,7 @@ export default function ProjectCard({ project }) {
               className="flex gap-x-2 text-sm items-center"
               rel="noreferrer"
             >
-              <Image
+              <Image loading="lazy"
                 src={"/icons/link_icon.svg"}
                 alt="project img"
                 width={20}
@@ -46,7 +46,7 @@ export default function ProjectCard({ project }) {
                 className="flex text-sm gap-x-2 items-center"
                 rel="noreferrer"
               >
-                <Image
+                <Image loading="lazy"
                   src={"/icons/github_link_icon.svg"}
                   alt="project img"
                   width={20}

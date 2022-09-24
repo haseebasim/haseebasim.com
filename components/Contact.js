@@ -21,7 +21,7 @@ export default function Contact() {
           </a>
         </div>
         <div className="hidden lg:block relative w-[350px] h-[350px] xl:w-[444px] xl:h-[444px] mr-0">
-          <Image src={"/images/contact.svg"} layout="fill" alt="contact" />
+          <Image loading="lazy" src={"/images/contact.svg"} layout="fill" alt="contact" />
         </div>
       </div>
     </Section>

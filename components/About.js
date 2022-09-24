@@ -34,7 +34,7 @@ export default function About() {
           </p>
         </div>
         <div className="relative w-[253px] h-[355px] sm:w-[353px] sm:h-[453px] lg:w-[453px] lg:h-[595px]">
-          <Image src={"/images/about_img.png"} alt="Me" layout="fill" />
+          <Image loading="lazy" src={"/images/about_img.png"} alt="Me" layout="fill" />
         </div>
       </div>
     </Section>

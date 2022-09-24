@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Section from "./Section";
 
 export default function Tools({ tools }) {

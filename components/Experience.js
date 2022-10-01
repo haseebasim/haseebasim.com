@@ -47,8 +47,8 @@ const Tab = ({ active, company, setActiveTab, index }) => {
       onClick={() => {
         setActiveTab(index);
       }}
-      className={`cursor-pointer transition-all duration-300 border-b-2 lg:border-b-0 lg:border-l-2 flex justify-center lg:justify-start items-end lg:items-center w-full min-w-[120px] lg:w-[200px] lg:pl-5 h-[60px] text-xl  text-center ${
-        active ? "border-primary" : "border-white"
+      className={`cursor-pointer transition-all duration-300 border-b-2 lg:border-b-0 lg:border-l-4 flex justify-center lg:justify-start items-end lg:items-center w-full min-w-[120px] lg:w-[200px] lg:pl-5 h-[60px] text-xl  text-center ${
+        active ? "border-primary text-primary" : "border-white"
       } `}
     >
       <span className="lg:ml-4">{company}</span>

@@ -64,3 +64,6 @@ ul {
   }
 }
 
+.link-hover:hover > div{
+  width: 100%;
+}

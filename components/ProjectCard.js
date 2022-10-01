@@ -7,7 +7,8 @@ export default function ProjectCard({ project }) {
   return (
     <div className=" w-[320px] max-h-[515px] min-h-[515px] flex flex-col  card-box-shadow rounded-[20px] bg-white bg-opacity-[0.07]">
       <div className="relative w-full h-[220px]">
-        <Image loading="lazy"
+        <Image
+          loading="lazy"
           className="rounded-t-[20px]"
           {...imageProps}
           alt="project img"
@@ -31,13 +32,17 @@ export default function ProjectCard({ project }) {
               className="flex gap-x-2 text-sm items-center"
               rel="noreferrer"
             >
-              <Image loading="lazy"
+              <Image
+                loading="lazy"
                 src={"/icons/link_icon.svg"}
                 alt="project img"
                 width={20}
                 height={20}
               />
-              <span>Live Preview</span>
+              <p className="link-hover">
+                Live Preview
+                <div className="border-b-2 transition-all duration-300 border-primary w-0"></div>
+              </p>
             </a>
             {project.code && (
               <a
@@ -46,13 +51,17 @@ export default function ProjectCard({ project }) {
                 className="flex text-sm gap-x-2 items-center"
                 rel="noreferrer"
               >
-                <Image loading="lazy"
+                <Image
+                  loading="lazy"
                   src={"/icons/github_link_icon.svg"}
                   alt="project img"
                   width={20}
                   height={20}
                 />
-                <span>View Code</span>
+                <p className="link-hover">
+                  View Code
+                  <div className="border-b-2 transition-all duration-300 border-primary w-0"></div>
+                </p>
               </a>
             )}
           </div>

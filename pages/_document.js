@@ -17,8 +17,13 @@ export default function Document() {
         />
         <meta
           name="description"
-          content="A Full Stack Developer, developing exceptional digital experiences with a touch of the cloud."
+          content="A Full Stack Developer, developing exceptional digital experiences with a touch of cloud computing"
         />
+        <meta
+          name="keywords"
+          content="React, Next, Node, TypeScript, Freelance, Upwork, Node, Backend, Frontend, Developer, Web Developer, GoLang"
+        />
+        <meta name="author" content="John Doe" />
         <title>Haseeb Asim</title>
       </Head>
       <body>

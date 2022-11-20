@@ -1,9 +1,7 @@
 import Image from "next/image";
-import { useRouter } from "next/router";
 import Section from "./Section";
 
 export default function Contact() {
-  const router = useRouter();
   return (
     <Section reverseBg={true} id="contact">
       <div className="flex flex-col gap-y-5">

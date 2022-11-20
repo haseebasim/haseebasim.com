@@ -1,16 +1,13 @@
-import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
-import { client } from "../util/sanity";
 
 export default function ProjectCard({ project }) {
-  const imageProps = useNextSanityImage(client, project.image);
   return (
     <div className=" w-[320px] max-h-[515px] min-h-[515px] flex flex-col  card-box-shadow rounded-[20px] bg-white bg-opacity-[0.07]">
       <div className="relative w-full h-[220px]">
         <Image
           loading="lazy"
           className="rounded-t-[20px]"
-          {...imageProps}
+          src={project.img}
           alt="project img"
           layout="fill"
         />
@@ -23,7 +20,7 @@ export default function ProjectCard({ project }) {
         <div>
           <p className="text-sm">
             <span className="font-semibold">Tech stack :</span>{" "}
-            {project.stack.join(" , ")}
+            {project.technologies}
           </p>
           <div className="flex justify-between items-center text-primary mt-5">
             <a
@@ -39,15 +36,15 @@ export default function ProjectCard({ project }) {
                 width={20}
                 height={20}
               />
-              <p className="link-hover">
-                Live Preview
+              <div>
+                <p className="link-hover">Live Preview</p>
                 <div className="border-b-2 transition-all duration-300 border-primary w-0"></div>
-              </p>
+              </div>
             </a>
-            {project.code && (
+            {project.github && (
               <a
                 target={"_blank"}
-                href={project.code}
+                href={project.github}
                 className="flex text-sm gap-x-2 items-center"
                 rel="noreferrer"
               >
@@ -58,10 +55,10 @@ export default function ProjectCard({ project }) {
                   width={20}
                   height={20}
                 />
-                <p className="link-hover">
-                  View Code
+                <div>
+                  <p className="link-hover">View Code</p>
                   <div className="border-b-2 transition-all duration-300 border-primary w-0"></div>
-                </p>
+                </div>
               </a>
             )}
           </div>

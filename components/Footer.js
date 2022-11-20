@@ -1,4 +1,3 @@
-import Image from "next/image";
 import CustomLink from "./common/CustomLink";
 
 export default function Footer() {

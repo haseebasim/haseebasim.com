@@ -64,6 +64,6 @@ ul {
   }
 }
 
-.link-hover:hover > div{
+.link-hover:hover + div{
   width: 100%;
 }

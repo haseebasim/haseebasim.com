@@ -1,5 +1,4 @@
 import Section from "./Section";
-import BlockContent from "@sanity/block-content-to-react";
 import { useState } from "react";
 /* eslint-disable react/no-unescaped-entities */
 export default function Experience({ experience }) {
@@ -68,10 +67,14 @@ const TabSection = ({ active, company, position, block, to, from }) => {
           {position} @ <span className="font-bold">{company}</span>
         </p>
         <p>
-          {to} - {from}
+          {from} - {to}
         </p>
       </div>
-      <BlockContent blocks={block} />
+      <ul>
+        {block.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 };

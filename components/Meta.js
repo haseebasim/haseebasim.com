@@ -15,12 +15,12 @@ const Meta = ({ title, route }) => {
       />
       <meta property="og:url" content={`https://www.haseebasim.com${route}`} />
       {/* <meta name="title" content={title} /> */}
-      <meta
+      {/* <meta
         name="description"
         content={
           "A Full Stack Developer, developing exceptional digital experiences with a touch of cloud computing"
         }
-      />
+      /> */}
       <meta name="author" content={"Haseeb Asim"} />
       <link rel="canonical" href={`https://www.haseebasim.com${route}`} />
       <title>{title}</title>

@@ -14,7 +14,7 @@ const Meta = ({ title, route }) => {
         }
       />
       <meta property="og:url" content={`https://www.haseebasim.com${route}`} />
-      <meta name="title" content={title} />
+      {/* <meta name="title" content={title} /> */}
       <meta
         name="description"
         content={

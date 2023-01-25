@@ -20,7 +20,7 @@ export default function ProjectCard({ project }) {
         <div>
           <p className="text-sm">
             <span className="font-semibold">Tech stack :</span>{" "}
-            {project.technologies}
+            {project.technologies.join(' , ')}
           </p>
           <div className="flex justify-between items-center text-primary mt-5">
             <a

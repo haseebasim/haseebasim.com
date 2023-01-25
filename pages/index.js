@@ -9,10 +9,12 @@ import BottomNav from "../components/BottomNav";
 import Footer from "../components/Footer";
 
 import { ExperienceData, ProjectsData, ToolsData } from "../util/data";
+import Meta from "../components/Meta";
 
 export default function Home({ projects, tools, experience }) {
   return (
     <main className={"relative main-container bg-accentDark"}>
+      <Meta title={"Haseeb Asim"} route="/" />
       <Nav />
       <Hero />
       <Projects projects={projects} />
@@ -27,13 +29,11 @@ export default function Home({ projects, tools, experience }) {
 }
 
 export async function getStaticProps() {
-  
-
   return {
     props: {
-      projects:ProjectsData,
-      tools:ToolsData,
-      experience:ExperienceData,
+      projects: ProjectsData,
+      tools: ToolsData,
+      experience: ExperienceData,
     },
   };
 }

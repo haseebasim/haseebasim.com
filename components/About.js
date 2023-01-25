@@ -4,8 +4,10 @@ import Section from "./Section";
 
 export default function About() {
   return (
-    <Section id={"about"}>
-      <p className="text-3xl sm:text-4xl  font-bold mb-10">About Me</p>
+    <Section>
+      <p className="text-3xl sm:text-4xl  font-bold mb-10" id={"about"}>
+        About Me
+      </p>
       <div className="grid gap-y-10 lg:grid-cols-2 w-full items-center justify-items-center lg:justify-items-end">
         <div className="flex flex-col gap-y-5 text-lg">
           <p>My name is Haseeb Asim</p>
@@ -34,7 +36,12 @@ export default function About() {
           </p>
         </div>
         <div className="relative w-[253px] h-[355px] sm:w-[353px] sm:h-[453px] lg:w-[453px] lg:h-[595px]">
-          <Image loading="lazy" src={"/images/about_img.png"} alt="Me" layout="fill" />
+          <Image
+            loading="lazy"
+            src={"/images/about_img.png"}
+            alt="Me"
+            layout="fill"
+          />
         </div>
       </div>
     </Section>

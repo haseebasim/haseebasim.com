@@ -10,6 +10,7 @@ export default function Nav() {
         <div className="hidden sm:flex capitalize text-base  gap-x-[5.35vw]">
           <a className="hover:text-primary transition-colors duration-300" href="#projects">Projects</a>
           <a className="hover:text-primary transition-colors duration-300" href="#about">About me</a>
+          <a className="hover:text-primary transition-colors duration-300" href="#experience">Experience</a>
           <a className="hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
         </div>
       </div>

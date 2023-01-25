@@ -5,7 +5,7 @@ export default function Experience({ experience }) {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <Section minHeight={false}>
+    <Section id="experience" minHeight={false}>
       <div>
         <p className="mb-5 font-bold text-3xl sm:text-4xl">Experience</p>
         <p className="text-xl sm:text-2xl">Where I've worked</p>

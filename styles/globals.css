@@ -64,6 +64,30 @@ ul {
   }
 }
 
-.link-hover:hover + div{
+.link-hover:hover + div {
   width: 100%;
+}
+
+.markdown-wrapper {
+  @apply text-lg flex flex-col gap-y-4;
+}
+
+.markdown-wrapper pre {
+  background-color: black;
+}
+
+.markdown-wrapper code {
+  @apply bg-black text-white p-2 rounded-md;
+}
+
+.markdown-wrapper h2 {
+  @apply text-2xl text-primary;
+}
+
+.markdown-wrapper h3 {
+  @apply text-xl text-primary;
+}
+
+.markdown-wrapper ul {
+  @apply mt-0;
 }

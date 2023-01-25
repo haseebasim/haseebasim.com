@@ -5,18 +5,24 @@ author: "Osama Riaz"
 featuredImage: https://ripeseed-landing-page.s3.amazonaws.com/hello-cold-world.jpeg
 ---
 
+![Alt text](/images/about_img.png)
+
+
 When working on a large project with multiple sub-projects, it's important to have a streamlined development flow to ensure that teams can work efficiently and effectively. In this blog post, we'll be discussing how we improved our development process for a recent project, which consists of four sub-projects all housed in a single repository. The main technologies used in the project were Vue, Prisma, GraphQL, Apollo, and TypeGraphQL.
 
 ## Problem
 
 For the ease of readers we have divided this section into summarized and detailed sections
 
-### Summarized version of the problems we are facing:
--   Tedious process for setting up the repository and installing necessary packages for each sub-project
--   Time-consuming and error-prone process of running a command to generate mutations.graphql and queries.graphql files, then manually copying and pasting them into other three sub-projects
--   Issues with code formatting, as each developer has their own preferred formatting, leading to noise when reviewing code and causing delays and frustration for frontend and backend teams.
 
-### Detailed  version
+### Summarized version of the problems we are facing:
+
+- Tedious process for setting up the repository and installing necessary packages for each sub-project
+- Time-consuming and error-prone process of running a command to generate mutations.graphql and queries.graphql files, then manually copying and pasting them into other three sub-projects
+- Issues with code formatting, as each developer has their own preferred formatting, leading to noise when reviewing code and causing delays and frustration for frontend and backend teams.
+
+### Detailed version
+
 Before we made changes to our development flow, the process of getting set up after cloning the repository was quite tedious. For each sub-project, we had to individually install all necessary packages. The backend development process also had its own set of challenges. We were using TypeGraphQL to generate a `schema.gql` file, which would contain all of the types, queries, and mutations for the project. Every time we made changes to the code, we had to run a command to generate the `mutations.graphql` and `queries.graphql` files. The command we used was `amplify-graphql-docs-generator --schema src/schema.gql --output src/graphql/ --language graphql --separateFiles true --maxDepth 6`. Once we are done with the required changes we then had to manually copying and pasting these file to other three sub-projects.
 
 This process of generating these files and then manually copying and pasting them into the other three sub-projects that would be using the backend was extremely time-consuming and prone to errors. We often forgot to generate the files, or would accidentally move them to the wrong location. Additionally, there was an issue with code formatting. Each developer had their own preferred formatting, which resulted in noise when reviewing the code. Some developers had enabled auto-formatter on save, while others were not using anything. This caused a lot of back and forth between the frontend and backend teams, leading to delays and frustration.
@@ -31,11 +37,13 @@ With a main package.json file in place, we moved forward with setting up the Git
 
 Here's an example of the content of our pre-commit file:
 
+```
     #!/usr/bin/env sh
 
     .  "$(dirname -- "$0")/_/husky.sh"
 
     npx lint-staged
+```
 
 This setup allowed us to automatically format all of our code as soon as it was committed, ensuring that it adhered to a consistent style. This improved the code review process, as we no longer had to spend time on formatting issues.
 

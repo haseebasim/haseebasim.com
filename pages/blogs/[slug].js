@@ -9,9 +9,16 @@ import Section from "../../components/Section";
 const components = {};
 
 export default function TestPage({ source }) {
+  console.log(source);
   return (
     <Section>
-      <MDXRemote {...source} components={components} />
+      <div className="mb-10 flex gap-y-2 flex-col">
+        <h1 className="text-4xl">{source.frontmatter.title}</h1>
+        <p className="text-sm text-primary">{source.frontmatter.date}</p>
+      </div>
+      <div className="markdown-wrapper">
+        <MDXRemote {...source} components={components} />
+      </div>
     </Section>
   );
 }
@@ -42,8 +49,8 @@ export async function getStaticProps({ params }) {
   const mdxSource = await serialize(source, {
     parseFrontmatter: true,
     mdxOptions: {
-      //   remarkPlugins: [smartypants],
-      rehypePlugins: [rehypePrism],
+        // remarkPlugins: [smartypants],
+        rehypePlugins: [rehypePrism],
     },
   });
 

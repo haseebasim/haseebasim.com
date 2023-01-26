@@ -1,12 +1,11 @@
 ---
 title: Improving Development Flow in a Multi-Project Repo
-date: "2023-01-18T11:18:55.646Z"
-author: "Osama Riaz"
+date: '2023-01-18T11:18:55.646Z'
+author: 'Osama Riaz'
 featuredImage: https://ripeseed-landing-page.s3.amazonaws.com/hello-cold-world.jpeg
 ---
 
 ![Alt text](/images/about_img.png)
-
 
 When working on a large project with multiple sub-projects, it's important to have a streamlined development flow to ensure that teams can work efficiently and effectively. In this blog post, we'll be discussing how we improved our development process for a recent project, which consists of four sub-projects all housed in a single repository. The main technologies used in the project were Vue, Prisma, GraphQL, Apollo, and TypeGraphQL.
 
@@ -14,12 +13,11 @@ When working on a large project with multiple sub-projects, it's important to ha
 
 For the ease of readers we have divided this section into summarized and detailed sections
 
-
 ### Summarized version of the problems we are facing:
 
-- Tedious process for setting up the repository and installing necessary packages for each sub-project
-- Time-consuming and error-prone process of running a command to generate mutations.graphql and queries.graphql files, then manually copying and pasting them into other three sub-projects
-- Issues with code formatting, as each developer has their own preferred formatting, leading to noise when reviewing code and causing delays and frustration for frontend and backend teams.
+-   Tedious process for setting up the repository and installing necessary packages for each sub-project
+-   Time-consuming and error-prone process of running a command to generate mutations.graphql and queries.graphql files, then manually copying and pasting them into other three sub-projects
+-   Issues with code formatting, as each developer has their own preferred formatting, leading to noise when reviewing code and causing delays and frustration for frontend and backend teams.
 
 ### Detailed version
 

@@ -1,24 +1,20 @@
 module.exports = {
     env: {
         browser: true,
-        es2021: true
+        es2021: true,
+        node: true
     },
-    extends: ['eslint:recommended', 'plugin:react/recommended', 'next', 'next/core-web-vitals'],
-    parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module'
-    },
-    plugins: ['react', 'prettier', 'simple-import-sort', 'unused-imports'],
+    plugins: ['simple-import-sort', 'unused-imports', 'prettier'],
+    extends: ['eslint:recommended', 'next', 'next/core-web-vitals'],
     rules: {
-        'no-unused-vars': 'off',
+        'no-unused-vars': 'warn',
         'no-console': 'warn',
-        '@typescript-eslint/explicit-module-boundary-types': 'off',
         'react/no-unescaped-entities': 'off',
 
         'react/display-name': 'off',
         'react/jsx-curly-brace-presence': ['warn', { props: 'never', children: 'never' }],
 
-        '@typescript-eslint/no-unused-vars': 'off',
+        //#region  //*=========== Unused Import ===========
         'unused-imports/no-unused-imports': 'warn',
         'unused-imports/no-unused-vars': [
             'warn',
@@ -29,7 +25,9 @@ module.exports = {
                 argsIgnorePattern: '^_'
             }
         ],
+        //#endregion  //*======== Unused Import ===========
 
+        //#region  //*=========== Import Sort ===========
         'simple-import-sort/exports': 'warn',
         'simple-import-sort/imports': [
             'warn',
@@ -66,6 +64,7 @@ module.exports = {
                 ]
             }
         ]
+        //#endregion  //*======== Import Sort ===========
     },
     globals: {
         React: true,

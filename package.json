@@ -10,7 +10,8 @@
         "lint:fix": "eslint --ignore-path .eslintignore --fix . && yarn format",
         "lint:strict": "eslint --ignore-path .eslintignore --max-warnings=0 .",
         "format": "prettier -w .",
-        "format:check": "prettier -c ."
+        "format:check": "prettier -c .",
+        "prepare": "husky install"
     },
     "dependencies": {
         "next": "12.2.2",
@@ -31,6 +32,7 @@
         "eslint-plugin-unused-imports": "^2.0.0",
         "postcss": "^8.4.16",
         "prettier": "^2.8.3",
-        "tailwindcss": "^3.1.8"
+        "tailwindcss": "^3.1.8",
+        "husky": "^8.0.0"
     }
 }

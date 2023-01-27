@@ -11,28 +11,28 @@ import Tools from '../components/Tools';
 import { ExperienceData, ProjectsData, ToolsData } from '../util/data';
 
 export default function Home({ projects, tools, experience }) {
-    return (
-        <main className="relative main-container bg-accentDark">
-            <Meta title="Haseeb Asim" route="/" />
-            <Nav />
-            <Hero />
-            <Projects projects={projects} />
-            <About />
-            <Tools tools={tools} />
-            <Experience experience={experience} />
-            <Contact />
-            <BottomNav />
-            <Footer />
-        </main>
-    );
+  return (
+    <main className="relative main-container bg-accentDark">
+      <Meta title="Haseeb Asim" route="/" />
+      <Nav />
+      <Hero />
+      <Projects projects={projects} />
+      <About />
+      <Tools tools={tools} />
+      <Experience experience={experience} />
+      <Contact />
+      <BottomNav />
+      <Footer />
+    </main>
+  );
 }
 
 export async function getStaticProps() {
-    return {
-        props: {
-            projects: ProjectsData,
-            tools: ToolsData,
-            experience: ExperienceData
-        }
-    };
+  return {
+    props: {
+      projects: ProjectsData,
+      tools: ToolsData,
+      experience: ExperienceData
+    }
+  };
 }

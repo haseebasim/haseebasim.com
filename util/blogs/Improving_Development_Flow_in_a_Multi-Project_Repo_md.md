@@ -15,9 +15,9 @@ For the ease of readers we have divided this section into summarized and detaile
 
 ### Summarized version of the problems we are facing:
 
--   Tedious process for setting up the repository and installing necessary packages for each sub-project
--   Time-consuming and error-prone process of running a command to generate mutations.graphql and queries.graphql files, then manually copying and pasting them into other three sub-projects
--   Issues with code formatting, as each developer has their own preferred formatting, leading to noise when reviewing code and causing delays and frustration for frontend and backend teams.
+- Tedious process for setting up the repository and installing necessary packages for each sub-project
+- Time-consuming and error-prone process of running a command to generate mutations.graphql and queries.graphql files, then manually copying and pasting them into other three sub-projects
+- Issues with code formatting, as each developer has their own preferred formatting, leading to noise when reviewing code and causing delays and frustration for frontend and backend teams.
 
 ### Detailed version
 

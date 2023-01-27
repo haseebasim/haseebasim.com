@@ -3,91 +3,91 @@
 @tailwind utilities;
 
 @layer base {
-    html,
-    body {
-        font-family: 'Open Sans';
-        scroll-behavior: smooth;
-    }
+  html,
+  body {
+    font-family: 'Open Sans';
+    scroll-behavior: smooth;
+  }
 }
 
 body {
-    position: relative;
+  position: relative;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    outline: none;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
 }
 
 .card-box-shadow {
-    box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.2);
 }
 
 ul {
-    @apply mt-7 flex flex-col gap-y-4 list-outside list-disc pl-5;
+  @apply mt-7 flex flex-col gap-y-4 list-outside list-disc pl-5;
 }
 
 .hero-container {
-    animation: 1s ease-out 0s 1 hero-animation;
+  animation: 1s ease-out 0s 1 hero-animation;
 }
 
 @keyframes hero-animation {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .nav-container {
-    animation: 1s ease-out 0s 1 nav-animation;
+  animation: 1s ease-out 0s 1 nav-animation;
 }
 
 @keyframes nav-animation {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .link-hover:hover + div {
-    width: 100%;
+  width: 100%;
 }
 
 .markdown-wrapper {
-    @apply text-lg flex flex-col gap-y-4;
+  @apply text-lg flex flex-col gap-y-4;
 }
 
 .markdown-wrapper pre {
-    background-color: black;
+  background-color: black;
 }
 
 .markdown-wrapper code {
-    @apply bg-black text-white p-2 rounded-md;
+  @apply bg-black text-white p-2 rounded-md;
 }
 
 .markdown-wrapper h2 {
-    @apply text-2xl text-primary;
+  @apply text-2xl text-primary;
 }
 
 .markdown-wrapper h3 {
-    @apply text-xl text-primary;
+  @apply text-xl text-primary;
 }
 
 .markdown-wrapper ul {
-    @apply mt-0;
+  @apply mt-0;
 }

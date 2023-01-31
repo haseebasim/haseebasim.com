@@ -69,23 +69,23 @@ ul {
 }
 
 .markdown-wrapper {
-  @apply text-lg flex flex-col gap-y-4;
+  @apply text-lg flex flex-col gap-y-4 w-4/5 mx-auto;
 }
 
 .markdown-wrapper pre {
-  background-color: black;
+  @apply bg-primary py-1 rounded-md;
 }
 
 .markdown-wrapper code {
-  @apply bg-black text-white p-2 rounded-md;
+  @apply bg-primary text-black py-1 px-2 rounded-md;
 }
 
 .markdown-wrapper h2 {
-  @apply text-2xl text-primary;
+  @apply text-3xl border-b-primary border-b w-fit;
 }
 
 .markdown-wrapper h3 {
-  @apply text-xl text-primary;
+  @apply text-2xl;
 }
 
 .markdown-wrapper ul {

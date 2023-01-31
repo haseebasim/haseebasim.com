@@ -2,10 +2,9 @@
 title: Improving Development Flow in a Multi-Project Repo
 date: '2023-01-18T11:18:55.646Z'
 author: 'Osama Riaz'
+description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
 featuredImage: https://ripeseed-landing-page.s3.amazonaws.com/hello-cold-world.jpeg
 ---
-
-![Alt text](/images/about_img.png)
 
 When working on a large project with multiple sub-projects, it's important to have a streamlined development flow to ensure that teams can work efficiently and effectively. In this blog post, we'll be discussing how we improved our development process for a recent project, which consists of four sub-projects all housed in a single repository. The main technologies used in the project were Vue, Prisma, GraphQL, Apollo, and TypeGraphQL.
 
@@ -35,7 +34,7 @@ With a main package.json file in place, we moved forward with setting up the Git
 
 Here's an example of the content of our pre-commit file:
 
-```
+```bash
     #!/usr/bin/env sh
 
     .  "$(dirname -- "$0")/_/husky.sh"

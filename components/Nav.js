@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Nav() {
   return (
@@ -17,6 +18,9 @@ export default function Nav() {
           <a className="hover:text-primary transition-colors duration-300" href="#experience">
             Experience
           </a>
+          <Link href="/blogs" className="hover:text-primary transition-colors duration-300">
+            Blogs
+          </Link>
           <a className="hover:text-primary transition-colors duration-300" href="#contact">
             Contact
           </a>

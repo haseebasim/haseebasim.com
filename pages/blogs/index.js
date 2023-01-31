@@ -4,12 +4,14 @@ import path from 'path';
 
 import BlogCard from '../../components/BlogCard';
 import BottomNav from '../../components/BottomNav';
+import Meta from '../../components/Meta';
 import Nav from '../../components/Nav';
 import Section from '../../components/Section';
 
 export default function BlogListing({ blogList }) {
   return (
     <>
+      <Meta title="Blogs" route="/blogs" />
       <Nav />
       <BottomNav />
       <Section>

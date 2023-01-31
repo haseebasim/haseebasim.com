@@ -3,6 +3,7 @@ import * as matter from 'gray-matter';
 import path from 'path';
 
 import BlogCard from '../../components/BlogCard';
+import BottomNav from '../../components/BottomNav';
 import Nav from '../../components/Nav';
 import Section from '../../components/Section';
 
@@ -10,12 +11,15 @@ export default function BlogListing({ blogList }) {
   return (
     <>
       <Nav />
+      <BottomNav />
       <Section>
-        <h1 className="text-6xl text-center font-bold">Blogs</h1>
-        <div className="py-32 max-w-5xl mx-auto">
-          {blogList.map((blog, index) => {
-            return <BlogCard key={index} {...blog} />;
-          })}
+        <div className="mt-20 xl:mt-0">
+          <h1 className="text-6xl text-center font-bold">Blogs</h1>
+          <div className="py-32 max-w-5xl mx-auto">
+            {blogList.map((blog, index) => {
+              return <BlogCard key={index} {...blog} />;
+            })}
+          </div>
         </div>
       </Section>
     </>

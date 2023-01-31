@@ -9,21 +9,21 @@ export default function Nav() {
           <Image loading="lazy" alt="nav-brand" src="/icons/HA.svg" width={60} height={60} />
         </div>
         <div className="hidden sm:flex capitalize text-base  gap-x-[5.35vw]">
-          <a className="hover:text-primary transition-colors duration-300" href="#projects">
+          <Link href="/blogs" className="hover:text-primary transition-colors duration-300">
             Projects
-          </a>
-          <a className="hover:text-primary transition-colors duration-300" href="#about">
+          </Link>
+          <Link href="/blogs" className="hover:text-primary transition-colors duration-300">
             About me
-          </a>
-          <a className="hover:text-primary transition-colors duration-300" href="#experience">
+          </Link>
+          <Link href="/blogs" className="hover:text-primary transition-colors duration-300">
             Experience
-          </a>
+          </Link>
           <Link href="/blogs" className="hover:text-primary transition-colors duration-300">
             Blogs
           </Link>
-          <a className="hover:text-primary transition-colors duration-300" href="#contact">
+          <Link href="/blogs" className="hover:text-primary transition-colors duration-300">
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

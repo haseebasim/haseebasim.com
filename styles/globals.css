@@ -69,15 +69,17 @@ ul {
 }
 
 .markdown-wrapper {
-  @apply text-lg flex flex-col gap-y-4 w-4/5 mx-auto;
+  @apply text-lg flex flex-col gap-y-4 lg:w-4/5 mx-auto break-words;
 }
 
 .markdown-wrapper pre {
-  @apply bg-primary py-1 rounded-md;
+  white-space: pre-line;
+
+  @apply bg-primary px-2 py-1 rounded-md;
 }
 
 .markdown-wrapper code {
-  @apply bg-primary text-black py-1 px-2 rounded-md;
+  @apply bg-primary text-black py-1 px-2 rounded-md break-words;
 }
 
 .markdown-wrapper h2 {

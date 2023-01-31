@@ -5,6 +5,7 @@ import { serialize } from 'next-mdx-remote/serialize';
 import path from 'path';
 import rehypePrism from 'rehype-prism-plus';
 
+import BottomNav from '../../components/BottomNav';
 import Meta from '../../components/Meta';
 import Nav from '../../components/Nav';
 import Section from '../../components/Section';
@@ -16,9 +17,10 @@ export default function TestPage({ source }) {
     <>
       <Meta title={source.frontmatter.title} route={`/blogs/${source.frontmatter.title}`} />
       <Nav />
+      <BottomNav />
       <Section>
-        <div className="relative mb-10 flex gap-y-2 flex-col">
-          <div className="relative w-full h-[522px] rounded-md">
+        <div className="relative mb-10 mt-20 xl:mt-0 flex gap-y-2 flex-col">
+          <div className="relative w-full h-96 lg:h-[522px] rounded-md">
             <Image
               className="blog-header-img rounded-md"
               src={source.frontmatter.featuredImage}
@@ -26,8 +28,10 @@ export default function TestPage({ source }) {
               layout="fill"
             />
             <div className="absolute flex flex-col justify-center items-center inset-0 bg-[#252B2F] bg-opacity-50 w-full h-full ">
-              <div className="w-2/4 text-center">
-                <p className="font-semibold text-4xl  leading-snug ">{source.frontmatter.title}</p>
+              <div className="sm:w-3/4 lg:w-2/4 px-2 text-center">
+                <p className="font-semibold text-3xl sm:text-4xl  leading-snug ">
+                  {source.frontmatter.title}
+                </p>
                 <p className="mt-6">{source.frontmatter.description}</p>
               </div>
             </div>

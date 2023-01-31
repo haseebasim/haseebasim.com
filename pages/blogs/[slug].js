@@ -1,7 +1,7 @@
 import fs from 'fs';
+import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
-import Image from 'next/image';
 import path from 'path';
 import rehypePrism from 'rehype-prism-plus';
 

@@ -5,7 +5,7 @@ export default function BlogCard({ title, description, datePosted, img, fileName
   return (
     <div className="grid grid-cols-2 gap-x-20 rounded">
       <div className="relative rounded-md">
-        <Image src={img} alt={title} className='rounded-md' layout="fill" />
+        <Image src={img} alt={title} className="rounded-md" layout="fill" />
       </div>
       <div className="py-[30px] flex flex-col gap-y-8 ">
         <div className="flex flex-col gap-y-4">

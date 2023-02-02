@@ -9,7 +9,7 @@ export default function Contact() {
         <div className="flex flex-col gap-y-10">
           <h1 className="text-3xl sm:text-4xl font-bold">Contact Me</h1>
           <p className="text-xl sm:text-2xl sm:w-3/4 font-light">
-            Have a job opportunity or want to collaborate on a project? my inbox is always open.
+            Have a job opportunity or want to collaborate on a project? My inbox is always open.
             Whether you have a question or just want to say hi, I’ll try my best to get back to you!
           </p>
           <a

@@ -95,16 +95,16 @@ export const ExperienceData = [
   {
     company: 'RipeSeed',
     to: 'Present',
-    from: 'June 2020',
+    from: 'June 2021',
     order: 0,
-    position: 'Associate Software Engineer',
+    position: 'Software Engineer',
     description:
       'My day-to-day tasks at RipeSeed technologies revolve around working with AWS and Back- end technologies such as Node Js, Nest Js, Golang, PostgreSQL, Docker, etc. I have worked on multiple projects such as:',
     text: [
-      'Deploying back-end systems on Elastic Beanstalk using Github actions.',
-      'Deploying Hasura GraphQL Engine over ECS using Cloud Formation Template, and managing traffic load using Auto Scaling Groups and Load Balancing.',
-      'Wrote multiple Golang microservices using AWS app sync and Lambda.',
-      'Created Serverless Crud applications using Goland and AWS.'
+      'Developed full-stack cloud based applications using technologies like AWS, Node, GoLang, React, Vue, etc.',
+      'Lead a team of 4 for a project, responsible for client communication and logging requirements, prepared sprint cycles and timelines and was also involved in feature development.',
+      'Deployed Hasura GraphQL Engine over ECS using Cloud Formation Template, and managing traffic load using Auto Scaling Groups and Load Balancing.',
+      'Developed various serverless application using GoLang and AWS'
     ]
   },
   {

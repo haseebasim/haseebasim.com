@@ -18,9 +18,13 @@ export default function BlogListing({ blogList }) {
         <div className="mt-20 xl:mt-0">
           <h1 className="text-6xl text-center font-bold">Blogs</h1>
           <div className="py-32 max-w-5xl mx-auto">
-            {blogList.map((blog, index) => {
-              return <BlogCard key={index} {...blog} />;
-            })}
+            {blogList.length === 0 ? (
+              <h1 className="text-center text-2xl">No blogs yet ...</h1>
+            ) : (
+              blogList.map((blog, index) => {
+                return <BlogCard key={index} {...blog} />;
+              })
+            )}
           </div>
         </div>
       </Section>

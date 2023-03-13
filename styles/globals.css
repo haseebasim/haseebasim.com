@@ -75,11 +75,12 @@ ul {
 .markdown-wrapper pre {
   white-space: pre-line;
 
-  @apply bg-primary px-2 py-1 rounded-md;
+  @apply bg-[#4B5864] text-white  px-2 py-1 rounded-md;
 }
 
-.markdown-wrapper code {
-  @apply bg-primary text-black py-1 px-2 rounded-md break-words;
+.markdown-wrapper > p code,
+.markdown-wrapper > span code {
+  @apply bg-[#4B5864] text-white px-2 py-[1px] rounded-md break-words;
 }
 
 .markdown-wrapper h2 {

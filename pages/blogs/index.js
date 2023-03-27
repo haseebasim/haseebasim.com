@@ -35,7 +35,7 @@ export default function BlogListing({ blogList }) {
 export async function getStaticProps() {
   const directoryPath = path.join(process.cwd(), 'util/blogs');
   const fileNames = fs.readdirSync(directoryPath);
-  const promises = fileNames.map(async (fileName) => {
+  const blogList = fileNames.map(async (fileName) => {
     const source = (
       await fs.promises.readFile(path.join(process.cwd(), `util/blogs/${fileName}`))
     ).toString();
@@ -48,8 +48,6 @@ export async function getStaticProps() {
 
     return { title, description, datePosted: date, img: featuredImage, fileName: slug };
   });
-
-  const blogList = await Promise.all(promises);
 
   return { props: { blogList } };
 }

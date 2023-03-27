@@ -30,8 +30,12 @@ export const ProjectsData = [
 
 export const ToolsData = [
   {
-    name: 'MongoDB',
-    tag: 'devicon-mongodb-plain colored'
+    name: 'JavaScript',
+    tag: 'devicon-javascript-plain colored'
+  },
+  {
+    name: 'React',
+    tag: 'devicon-react-original colored'
   },
   {
     name: 'Next JS',
@@ -42,44 +46,8 @@ export const ToolsData = [
     tag: 'devicon-redux-original colored'
   },
   {
-    name: 'AWS',
-    tag: 'devicon-amazonwebservices-original colored'
-  },
-  {
-    name: 'Github',
-    tag: 'devicon-github-original colored'
-  },
-  {
-    name: 'TypeScript',
-    tag: 'devicon-typescript-plain colored'
-  },
-  {
-    name: 'React',
-    tag: 'devicon-react-original colored'
-  },
-  {
-    name: 'Node JS',
-    tag: 'devicon-nodejs-plain colored'
-  },
-  {
-    name: 'Express',
-    tag: 'devicon-express-original'
-  },
-  {
-    name: 'Heroku',
-    tag: 'devicon-heroku-original colored'
-  },
-  {
-    name: 'Go',
-    tag: 'devicon-go-original-wordmark colored'
-  },
-  {
-    name: 'PostgreSQL',
-    tag: 'devicon-postgresql-plain colored'
-  },
-  {
-    name: 'JavaScript',
-    tag: 'devicon-javascript-plain colored'
+    name: 'Sass',
+    tag: 'devicon-sass-original colored'
   },
   {
     name: 'Tailwind CSS',
@@ -88,6 +56,51 @@ export const ToolsData = [
   {
     name: 'Material UI',
     tag: 'devicon-materialui-plain colored'
+  },
+  {
+    name: 'TypeScript',
+    tag: 'devicon-typescript-plain colored'
+  },
+  {
+    name: 'Express',
+    tag: 'devicon-express-original'
+  },
+  {
+    name: 'Node JS',
+    tag: 'devicon-nodejs-plain colored'
+  },
+  {
+    name: 'Go',
+    tag: 'devicon-go-original-wordmark colored'
+  },
+  {
+    name: 'Nest JS',
+    tag: 'devicon-nestjs-plain colored'
+  },
+  {
+    name: 'GraphQL',
+    tag: 'devicon-graphql-plain colored'
+  },
+  {
+    name: 'Heroku',
+    tag: 'devicon-heroku-original colored'
+  },
+
+  {
+    name: 'PostgreSQL',
+    tag: 'devicon-postgresql-plain colored'
+  },
+  {
+    name: 'MongoDB',
+    tag: 'devicon-mongodb-plain colored'
+  },
+  {
+    name: 'AWS',
+    tag: 'devicon-amazonwebservices-original colored'
+  },
+  {
+    name: 'Github',
+    tag: 'devicon-github-original colored'
   }
 ];
 
@@ -95,16 +108,16 @@ export const ExperienceData = [
   {
     company: 'RipeSeed',
     to: 'Present',
-    from: 'June 2021',
+    from: 'June 2022',
     order: 0,
     position: 'Software Engineer',
     description:
       'My day-to-day tasks at RipeSeed technologies revolve around working with AWS and Back- end technologies such as Node Js, Nest Js, Golang, PostgreSQL, Docker, etc. I have worked on multiple projects such as:',
     text: [
-      'Developed full-stack cloud based applications using technologies like AWS, Node, GoLang, React, Vue, etc.',
-      'Lead a team of 4 for a project, responsible for client communication and logging requirements, prepared sprint cycles and timelines and was also involved in feature development.',
-      'Deployed Hasura GraphQL Engine over ECS using Cloud Formation Template, and managing traffic load using Auto Scaling Groups and Load Balancing.',
-      'Developed various serverless application using GoLang and AWS'
+      'Developing a Cloud Security SaaS, which acts as a firewall for resources deployed over AWS.',
+      'Led the development of several products, from identifying system requirements to delegating tasks, software implementation, testing, and iterating over client feedback.',
+      'Provisioned and managed a variety of AWS resources using either cloud formation or terraform to deploy scalable and secure systems over the cloud.',
+      'Developed serverless applications using both Node Js and GoLang.'
     ]
   },
   {
@@ -113,10 +126,10 @@ export const ExperienceData = [
     order: 1,
     position: 'Full Stack Developer ',
     text: [
-      'A Top-Rated developer at Upwork, serving clients with 100% satisfaction in the domain of web development.',
-      'Have worked on multiple projects and developed various Front-end applications using React and Next js and deployed them.',
-      'Worked with Shopify Polaris and Shopify APIs in creating Shopify applications in React and Node JS.',
-      'Worked on creating and modifying Shopify Plugins.'
+      'Migrating an old Angular-based admin panel to React. Improving the current system and adding new features to improve accessibility and workflow.',
+      'Delivered multiple front-end and full-stack applications by identifying client and business requirements and software implementation using technologies such as React/Next/Node/AWS/Shopify, etc.',
+      'Worked on creating an external Shopify App using Shopify Admin APIs and Shopify Polaris.',
+      'Worked on improving a Shopify plugin and made CSS transitions for product catalogs for all the free themes'
     ],
     from: 'Dec 2020 '
   },
@@ -129,7 +142,7 @@ export const ExperienceData = [
     description:
       'At Robor, I worked on different technologies including Next Js, React, Agoric, Node, etc. ',
     text: [
-      'Worked on creating a sample card store marketplace dapp for Agoric. Agoric is a framework that utilizes javascript to develop secure smart contracts.',
+      'Developed a baseball card NFT marketplace dapp for Agoric. Agoric is a framework that utilizes javascript to develop secure smart contracts.',
       'Used Next JS, TypeScript, and Tailwind CSS to develop the complete UI for Kontractory, an online law firm that provides contracts and support for various legal matters. Followed the best practices and conventions to develop the UI.'
     ],
     from: 'Dec 2021 '
@@ -140,7 +153,7 @@ export const ExperienceData = [
     order: 3,
     position: 'Information Technology Intern',
     text: [
-      'Worked with Java Spring Boot framework to create back-end APIs.',
+      'Utilized Java Spring Boot framework to create back-end APIs.',
       'Learned about easy paisa and how it operates behind the scenes. Learned what technologies it uses and what kind of architecture it follows.'
     ],
     from: 'July 2021'
@@ -151,8 +164,7 @@ export const ExperienceData = [
     order: 4,
     position: 'React JS Developer',
     text: [
-      'Developed front-end applications using React.',
-      'Handled state management to optimize the application using Redux.',
+      'Developed front-end applications using React, and handled state management to optimize the application using Redux.',
       'Integrated back-end APIs to front-end applications and managed the states.'
     ],
     from: 'Nov 2020'

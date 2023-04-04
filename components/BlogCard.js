@@ -9,7 +9,7 @@ export default function BlogCard({ title, description, datePosted, img, fileName
       </div>
       <div className="py-[30px] flex flex-col gap-y-8 ">
         <div className="flex flex-col gap-y-4">
-          <p className="text-xs text-primary">{new Date(datePosted).toLocaleDateString()}</p>
+          <p className="text-xs text-primary">{datePosted}</p>
           <p className="text-2xl">{title}</p>
           <p className="text-base">{description}</p>
         </div>

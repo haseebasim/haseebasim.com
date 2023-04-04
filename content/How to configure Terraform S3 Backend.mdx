@@ -1,0 +1,127 @@
+---
+title: How to configure Terraform S3 Backend?
+date: 'March 23, 2023'
+author: 'Haseeb Asim'
+description: 'The blog highlights the importance of Terraform remote backend and how to implement one using AWS S3.'
+featuredImage: https://ripeseed-landing-page.s3.amazonaws.com/hello-cold-world.jpeg
+---
+
+It’s considered a best practice to store a Terraform state file in a remote backend for better accessibility, management, and security of course. Terraform State files contain the mapping of Terraform configurations against real-world deployments and are created at the very beginning of the execution of these configurations. All the changes after the first execution will always be validated by the same state files to make sure the intended changes are applied.
+
+In this blog post, we will configure an AWS S3 bucket as a remote backend for our Terraform configuration.
+
+## Why do we use a remote backend?
+
+By default, Terraform stores the state file in the root of our project (local backend) along with the Terraform config files. There are two main reasons why it’s recommended to store the state file in a remote backend.
+
+1. The state file as mentioned above stores the mapping of Terraform configurations against the real-world deployment, hence, it contains important information that should not be made public. For instance, your Terraform configuration might provision an RDS instance on AWS. The login information for that instance will be stored in the state file in human-readable form. That is why, it’s important to store the state file in a remote setting where it’s secure and can be accessed securely.
+2. Second, if multiple developers are working on the same configuration files and each has their own version of the state file, it can eventually bring about inconsistency in the deployments and can cause high infrastructure cost implications. Having a remote backend can solve this issue. In this case, we also need to implement a locking mechanism for state files. For instance, a Terraform operation is performed (plan, apply, destroy) that will modify the state file, while the operation is being performed by Terraform, if another operation is executed it will bring about a race condition. To avoid this, state files need to be locked for the duration of an operation and if in the meantime another operation is executed, it will be queued. Dynamo DB is used for this purpose but that’s a topic for another time. If you want to know more about it you can visit the official docs.
+
+## Implementation of S3 Backend
+
+Setting up an S3 backend for any Terraform project is quite straightforward. Before you start make sure you have [Terraform installed](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) and have [AWS CLI configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html).
+
+1. First, we will create an S3 bucket.
+
+   1. Give your bucket a name. S3 bucket names are unique globally so you might have to try different names.
+   2. Make sure all public access is blocked.
+
+      <Image
+        src="/images/How_to_configure_Terraform_S3_Backend/block_public_access.png"
+        alt="block_public_access"
+        width="600"
+        height="100%"
+        objectFit="contain"
+      />
+
+   3. Enable bucket versioning.
+   4. Enable Encryption. You can also use KMS encryption for better security but for that you will have to specify the KMS key in the backend configuration block.
+
+      <Image
+        src="/images/How_to_configure_Terraform_S3_Backend/encryption.png"
+        alt="encryption"
+        width="506"
+        height="821"
+      />
+
+2. Once the bucket has been created, create a **`main.tf`** file in a directory of your choice and add the following terraform configuration in the file.
+
+   ```jsx
+   terraform {
+     required_providers {
+       aws = {
+         source  = "hashicorp/aws"
+         version = "~> 4.16"
+       }
+     }
+
+     backend "s3" {
+       bucket = "mybucket"
+       key    = "path/to/my/key"
+       region = "mybucket-region"
+       encrypt = true
+       profile = "myprofile"
+     }
+
+     required_version = ">= 1.2.0"
+   }
+   ```
+
+   Add the relevant information of your bucket in the backend configuration block. The `bucket`
+
+   is your bucket name. The `key` is the path to the state file inside the bucket, you can set it as `state/terraform.tfstate` . The `region` is your bucket region. You don’t need `profile`
+
+   if you are using your default AWS CLI profile. If you are not change it to the name of the profile you want to use. You can get a list of all configured AWS CLI profiles using the command `aws configure list-profiles`
+
+3. Use the `terraform init` command to initialize your configuration and to see if you are able to access your S3 bucket. If everything goes right, you will see the following output.
+
+   <Image
+     src="/images/How_to_configure_Terraform_S3_Backend/init.png"
+     alt="init"
+     width="400"
+     height="400"
+   />
+
+   For now, there is nothing in the S3 bucket because we haven’t executed any operations yet. Let’s do that!
+
+4. Let’s configure the terraform `main.tf` to deploy a simple EC2 instance. Add the following configuration in the terraform file to deploy an EC2 instance.
+
+   ```jsx
+   provider "aws" {
+     region  = "us-east-1"
+     profile = "myprofile"
+   }
+
+   resource "aws_instance" "app_server" {
+     ami           = "ami-0557a15b87f6559cf"
+     instance_type = "t2.micro"
+
+     tags = {
+       Name = "My Example VM"
+     }
+   }
+   ```
+
+   The above configuration will deploy an EC2 instance in the us-east-1 region with the defined configuration in the resource block.
+
+5. Initialize the terraform configuration again and then use `terraform apply` command to apply the changes. The apply command will provision the EC2 instance in the AWS account.
+
+   <Image
+     src="/images/How_to_configure_Terraform_S3_Backend/instance_running.png"
+     alt="instance_running"
+     width="400"
+     height="400"
+   />
+
+   This operation will also generate a state file that will hold all the information regarding this deployment and will store that state file in the configured S3 backend. So, if you go and check your S3 bucket, there will be a state file in the state folder.
+
+   <Image
+     src="/images/How_to_configure_Terraform_S3_Backend/state_file.png"
+     alt="state_file"
+     width={3840 / 3}
+     height={2160 / 3}
+   />
+
+6. Make sure to destroy the Terraform deployment using the `terraform destroy`.
+
+That’s it. You have configured an S3 backend for your project. There were a lot of manual steps in using the AWS console to set up the backend but you can also set it up using Terraform configuration itself. Just make sure that these configurations are not part of the project’s Terraform configs.

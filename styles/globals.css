@@ -1,3 +1,6 @@
+/* prism vs code dark theme */
+@import './prism-vs-code-dark.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -68,29 +71,21 @@ ul {
   width: 100%;
 }
 
-.markdown-wrapper {
-  @apply text-lg flex flex-col gap-y-4 lg:w-4/5 mx-auto break-words;
+.mdx-wrapper ol {
+  margin: revert;
+  padding: revert;
+
+  @apply list-decimal list-outside;
 }
 
-.markdown-wrapper pre {
-  white-space: pre-line;
-
-  @apply bg-[#4B5864] text-white  px-2 py-1 rounded-md;
+.mdx-wrapper li {
+  @apply my-4 text-base;
 }
 
-.markdown-wrapper > p code,
-.markdown-wrapper > span code {
-  @apply bg-[#4B5864] text-white px-2 py-[1px] rounded-md break-words;
-}
-
-.markdown-wrapper h2 {
-  @apply text-3xl border-b-primary border-b w-fit;
-}
-
-.markdown-wrapper h3 {
-  @apply text-2xl;
-}
-
-.markdown-wrapper ul {
-  @apply mt-0;
+p code,
+strong code {
+  background-color: #1e1e1e;
+  padding: 2px 8px;
+  border-radius: 6px;
+  @apply text-primary;
 }

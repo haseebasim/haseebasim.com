@@ -74,7 +74,6 @@ ul {
 .mdx-wrapper ol {
   margin: revert;
   padding: revert;
-
   @apply list-decimal list-outside;
 }
 

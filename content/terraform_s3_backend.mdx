@@ -3,7 +3,7 @@ title: How to configure Terraform S3 Backend?
 date: 'March 23, 2023'
 author: 'Haseeb Asim'
 description: 'The blog highlights the importance of Terraform remote backend and how to implement one using AWS S3.'
-featuredImage: https://ripeseed-landing-page.s3.amazonaws.com/hello-cold-world.jpeg
+featuredImage: '/images/terraform_s3_backend/featured.png'
 ---
 
 It’s considered a best practice to store a Terraform state file in a remote backend for better accessibility, management, and security of course. Terraform State files contain the mapping of Terraform configurations against real-world deployments and are created at the very beginning of the execution of these configurations. All the changes after the first execution will always be validated by the same state files to make sure the intended changes are applied.
@@ -26,23 +26,12 @@ Setting up an S3 backend for any Terraform project is quite straightforward. Bef
    1. Give your bucket a name. S3 bucket names are unique globally so you might have to try different names.
    2. Make sure all public access is blocked.
 
-      <Image
-        src="/images/How_to_configure_Terraform_S3_Backend/block_public_access.png"
-        alt="block_public_access"
-        width="600"
-        height="100%"
-        objectFit="contain"
-      />
+      ![public_access](/images/terraform_s3_backend/block_public_access.png)
 
    3. Enable bucket versioning.
    4. Enable Encryption. You can also use KMS encryption for better security but for that you will have to specify the KMS key in the backend configuration block.
 
-      <Image
-        src="/images/How_to_configure_Terraform_S3_Backend/encryption.png"
-        alt="encryption"
-        width="506"
-        height="821"
-      />
+      ![encryption](/images/terraform_s3_backend/encryption.png)
 
 2. Once the bucket has been created, create a **`main.tf`** file in a directory of your choice and add the following terraform configuration in the file.
 
@@ -75,12 +64,7 @@ Setting up an S3 backend for any Terraform project is quite straightforward. Bef
 
 3. Use the `terraform init` command to initialize your configuration and to see if you are able to access your S3 bucket. If everything goes right, you will see the following output.
 
-   <Image
-     src="/images/How_to_configure_Terraform_S3_Backend/init.png"
-     alt="init"
-     width="400"
-     height="400"
-   />
+   ![terraform_init_response](/images/terraform_s3_backend/init.png)
 
    For now, there is nothing in the S3 bucket because we haven’t executed any operations yet. Let’s do that!
 
@@ -106,21 +90,11 @@ Setting up an S3 backend for any Terraform project is quite straightforward. Bef
 
 5. Initialize the terraform configuration again and then use `terraform apply` command to apply the changes. The apply command will provision the EC2 instance in the AWS account.
 
-   <Image
-     src="/images/How_to_configure_Terraform_S3_Backend/instance_running.png"
-     alt="instance_running"
-     width="400"
-     height="400"
-   />
+   ![instance_provisioned](/images/terraform_s3_backend/instance_running.png)
 
    This operation will also generate a state file that will hold all the information regarding this deployment and will store that state file in the configured S3 backend. So, if you go and check your S3 bucket, there will be a state file in the state folder.
 
-   <Image
-     src="/images/How_to_configure_Terraform_S3_Backend/state_file.png"
-     alt="state_file"
-     width={3840 / 3}
-     height={2160 / 3}
-   />
+   ![state_file](/images/terraform_s3_backend/state_file.png)
 
 6. Make sure to destroy the Terraform deployment using the `terraform destroy`.
 

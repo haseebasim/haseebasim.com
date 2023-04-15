@@ -8,7 +8,7 @@ export default function Nav() {
         <div>
           <Image loading="lazy" alt="nav-brand" src="/icons/HA.svg" width={60} height={60} />
         </div>
-        <div className="hidden sm:flex capitalize text-base  gap-x-[5.35vw]">
+        <div className="hidden sm:flex capitalize text-base  gap-x-16">
           <Link href="/#projects" className="hover:text-primary transition-colors duration-300">
             Projects
           </Link>

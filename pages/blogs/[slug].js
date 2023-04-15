@@ -16,8 +16,7 @@ import Section from '../../components/Section';
 const components = {
   h1: Heading.H1,
   h2: Heading.H2,
-  p: Para,
-  Image
+  p: Para
 };
 
 export default function TestPage({ source }) {
@@ -57,8 +56,10 @@ export async function getStaticPaths() {
   const directoryPath = path.join(process.cwd(), 'content');
   const fileNames = fs.readdirSync(directoryPath);
   const blogList = fileNames.map((fileName) => {
+    const slug = fileName.replace(/\.mdx$/, '');
+
     return {
-      params: { slug: fileName }
+      params: { slug }
     };
   });
 
@@ -70,7 +71,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const source = (
-    await fs.promises.readFile(path.join(process.cwd(), `content/${params.slug}`))
+    await fs.promises.readFile(path.join(process.cwd(), `content/${params.slug}.mdx`))
   ).toString();
 
   const mdxSource = await serialize(source, {

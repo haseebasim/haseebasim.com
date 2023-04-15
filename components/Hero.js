@@ -19,7 +19,7 @@ export default function Hero() {
               I am a Full Stack Developer, developing exceptional digital experiences with a touch
               of the cloud.
             </h4>
-            <div className="flex gap-x-4">
+            <div className="flex gap-x-4 gap-y-4 lg:flex-row flex-col">
               <a
                 className="hover:stroke-white stroke-[#474747] transition-all duration-300 hover:bg-accentLight shadow-md shadow-accentDark hover:text-white w-[236px] font-semibold text-black h-[50px] bg-white flex items-center rounded justify-center gap-x-2"
                 href="mailto:haseebzaidi321@gmail.com?subject=Hi"

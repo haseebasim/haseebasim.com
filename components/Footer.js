@@ -8,6 +8,7 @@ export default function Footer() {
         <CustomLink href="mailto:haseebzaidi321@gmail.com" img="/icons/email_link_icon.svg" />
         <CustomLink href="https://github.com/haseebasim" img="/icons/github_icon.svg" />
         <CustomLink href="https://www.linkedin.com/in/haseebrz/" img="/icons/linkedin_icon.svg" />
+        <CustomLink href="https://medium.com/@haseebzaidi321" img="/icons/medium-logo.svg" />
       </div>
     </div>
   );

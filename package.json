@@ -43,8 +43,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "format",
-      "lint:fix"
+      "yarn lint:fix"
     ]
   }
 }

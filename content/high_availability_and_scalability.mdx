@@ -1,0 +1,68 @@
+---
+title: High Availability and Scalability
+date: 'August 23, 2023'
+author: 'Haseeb Asim'
+description: 'Learn what is High Availability and Scalability.'
+featuredImage: '/images/high_availability_and_scalability/high_availability.png'
+---
+
+# High Availability and Scalability
+
+Consider you have an instance on AWS that hosts your application server and has a decent amount of vCPU and Memory. Your application gets a traffic of 10-20 users at a time and the instance is fairly capable of handling such traffic. But what if you suddenly get loads of traffic, may be 100-200 users at a time or may be around 1000 users trying to access your application. What do you think will happen? Will your instance be able to manage such a huge traffic with the same capabilities? The answer is, it won’t. Your server will go down due to network outage and lets face it, you will lose potential clients and revenue. 
+
+![https://media.giphy.com/media/WpaVhEcp3Qo2TjwyI1/giphy.gif](https://media.giphy.com/media/WpaVhEcp3Qo2TjwyI1/giphy.gif)
+
+The question here is, if something like this ever happens to you how are you going to make sure that your instance doesn’t crash and you don’t lose revenue and potential clients? That’s where these two concepts come into play, High Availability and Scalability.
+
+Let’s understand what these terms mean.
+
+## Scalability:
+
+In simple words it means:
+
+The ability of a system to handle greater loads in response to increased demand for work.
+
+There are two types of scalability:
+
+1. Vertical Scalability
+2. Horizontal Scalability
+
+## Vertical Scalability:
+
+Vertical scalability is expanding a system by increasing it’s own resources so that it can handle greater loads. The resources here can be CPU, memory, storage, network interfaces, etc.
+
+![Vertical Scalability](/images/high_availability_and_scalability/vertical.png)
+
+For example, you have an application running on a t2.micro but the instance is unable to handle the increasing load of request so you scale the instance type to t2.large, hence vertically scaling it’s resources. 
+
+Vertical scalability is very common for distributed systems such as databases. There’s also always a limit to how much you vertically scale depending upon the hardware options you have.
+
+## Horizontal Scalability:
+
+Horizontal scalability is expanding a system in terms of numbers i.e. instead of increasing the current instance resources, you provision more identical instances and balance the load among them.
+
+![Horizontal Scalability](/images/high_availability_and_scalability/horizontal.png)
+
+It’s pretty straight forward. If you have a t2.micro running your application, in times of greater load, provisioning multiple identical t2.micro instances and balancing load between them can save your application from crashing.
+
+It’s very easy to setup thanks to modern cloud technologies.
+
+Both the approaches have their own pros and cons and it’s advised to learn them so that when the time comes you can decide which one to use based on your infrastructure and application architecture. 
+
+## High Availability:
+
+High availability refers to a system’s ability to operate continuously without downtime or failure. It means having redundant servers at multiple locations and some failover strategy, so that if one server or a whole datacenter goes down, you are still up and running. 
+
+![High Availability](/images/high_availability_and_scalability/high_availability.png)
+
+There are two approaches to ensuring High Availability of a system:
+
+## Passive:
+
+In this approach, a system is kept as a backup in a standby mode, that only becomes active if the primary system fails.
+
+## Active:
+
+This approach goes hand to hand with Horizontal Scaling. Multiple identical systems are active at the same time and distribute the work load. If one system fails, other systems automatically pick up the workload.
+
+These approaches can be implemented by defining infrastructure that can automatically scale your instances, detecting greater workloads and ensure high availability by defining failover strategies. It’s really complex if one was to implement it but luckily for us we can use modern cloud providers such as AWS to easily implement these approaches using load balancer and auto scaling groups. More on that on the next article. 🙌🏻

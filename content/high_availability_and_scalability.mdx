@@ -8,7 +8,7 @@ featuredImage: '/images/high_availability_and_scalability/high_availability.png'
 
 # High Availability and Scalability
 
-Consider you have an instance on AWS that hosts your application server and has a decent amount of vCPU and Memory. Your application gets a traffic of 10-20 users at a time and the instance is fairly capable of handling such traffic. But what if you suddenly get loads of traffic, may be 100-200 users at a time or may be around 1000 users trying to access your application. What do you think will happen? Will your instance be able to manage such a huge traffic with the same capabilities? The answer is, it won’t. Your server will go down due to network outage and lets face it, you will lose potential clients and revenue. 
+Consider you have an instance on AWS that hosts your application server and has a decent amount of vCPU and Memory. Your application gets a traffic of 10-20 users at a time and the instance is fairly capable of handling such traffic. But what if you suddenly get loads of traffic, may be 100-200 users at a time or may be around 1000 users trying to access your application. What do you think will happen? Will your instance be able to manage such a huge traffic with the same capabilities? The answer is, it won’t. Your server will go down due to network outage and lets face it, you will lose potential clients and revenue.
 
 ![https://media.giphy.com/media/WpaVhEcp3Qo2TjwyI1/giphy.gif](https://media.giphy.com/media/WpaVhEcp3Qo2TjwyI1/giphy.gif)
 
@@ -33,7 +33,7 @@ Vertical scalability is expanding a system by increasing it’s own resources so
 
 ![Vertical Scalability](/images/high_availability_and_scalability/vertical.png)
 
-For example, you have an application running on a t2.micro but the instance is unable to handle the increasing load of request so you scale the instance type to t2.large, hence vertically scaling it’s resources. 
+For example, you have an application running on a t2.micro but the instance is unable to handle the increasing load of request so you scale the instance type to t2.large, hence vertically scaling it’s resources.
 
 Vertical scalability is very common for distributed systems such as databases. There’s also always a limit to how much you vertically scale depending upon the hardware options you have.
 
@@ -47,11 +47,11 @@ It’s pretty straight forward. If you have a t2.micro running your application,
 
 It’s very easy to setup thanks to modern cloud technologies.
 
-Both the approaches have their own pros and cons and it’s advised to learn them so that when the time comes you can decide which one to use based on your infrastructure and application architecture. 
+Both the approaches have their own pros and cons and it’s advised to learn them so that when the time comes you can decide which one to use based on your infrastructure and application architecture.
 
 ## High Availability:
 
-High availability refers to a system’s ability to operate continuously without downtime or failure. It means having redundant servers at multiple locations and some failover strategy, so that if one server or a whole datacenter goes down, you are still up and running. 
+High availability refers to a system’s ability to operate continuously without downtime or failure. It means having redundant servers at multiple locations and some failover strategy, so that if one server or a whole datacenter goes down, you are still up and running.
 
 ![High Availability](/images/high_availability_and_scalability/high_availability.png)
 

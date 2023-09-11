@@ -15,10 +15,10 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "12.2.2",
+    "next": "^13.4.19",
     "next-mdx-remote": "^4.3.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-hotjar": "^5.2.0",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-code-titles": "^1.2.0",
@@ -30,7 +30,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.8",
     "eslint": "8.20.0",
-    "eslint-config-next": "12.2.2",
+    "eslint-config-next": "^13.4.19",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.1",
     "eslint-plugin-simple-import-sort": "^9.0.0",

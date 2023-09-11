@@ -13,10 +13,11 @@ export default function BlogCard({ title, description, datePosted, img, fileName
           <p className="text-2xl">{title}</p>
           <p className="text-base">{description}</p>
         </div>
-        <Link href={`/blogs/${fileName}`}>
-          <a className="w-fit flex items-center gap-x-2 text-sm hover:text-primary duration-300 transition-colors">
-            Read More
-          </a>
+        <Link
+          href={`/blogs/${fileName}`}
+          className="w-fit flex items-center gap-x-2 text-sm hover:text-primary duration-300 transition-colors"
+        >
+          Read More
         </Link>
       </div>
     </div>

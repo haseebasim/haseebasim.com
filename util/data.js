@@ -106,46 +106,58 @@ export const ToolsData = [
 
 export const ExperienceData = [
   {
-    company: 'RipeSeed',
+    company: 'Matchclub.tech',
+    from: 'November 2023',
     to: 'Present',
-    from: 'June 2022',
     order: 0,
+    position: 'Software Engineer',
+    text: [
+      'Have been an integral part of the team in developing efficient, scalable, and user-experience-focused data management software using Next.js, tailwind CSS, MUI, and RTK Query.',
+      'Directly engaging with the client to understand feature requirements, highlight and suggest improvements, and convert technical specifications to code.',
+      'Involved in PR reviews and ensuring best practices for the production environment.'
+    ]
+  },
+  {
+    company: 'RipeSeed',
+    from: 'June 2022',
+    to: 'October 2023',
+    order: 1,
     position: 'Software Engineer',
     description:
       'My day-to-day tasks at RipeSeed technologies revolve around working with AWS and Back- end technologies such as Node Js, Nest Js, Golang, PostgreSQL, Docker, etc. I have worked on multiple projects such as:',
     text: [
-      'Developing a Cloud Security SaaS, which acts as a firewall for resources deployed over AWS.',
-      'Led the development of several products, from identifying system requirements to delegating tasks, software implementation, testing, and iterating over client feedback.',
-      'Provisioned and managed a variety of AWS resources using either cloud formation or terraform to deploy scalable and secure systems over the cloud.',
-      'Developed serverless applications using both Node Js and GoLang.'
+      'Being a client success manager my work revolves around taking discovery calls, gathering project requirements and defining timelines, deliverables, and goals, fostering long-term relationships, and delivering exceptional service.',
+      'Ensured effective communication between the team and client, translating technical specifications to achievable tasks for the developers and making sure the team and the client were all on the same page concerning timeline and goals.',
+      'Developed AI-based solutions using the power of Open AI models and technologies such as LangChain, Pinecone, Python, AWS, etc.',
+      'Involved in setting up automated deployment pipelines for both production and development, also took part in designing the scalable serverless and monolithic architecture for applications.'
     ]
   },
   {
     company: 'Upwork',
+    from: 'Dec 2020',
     to: 'Present',
     order: 1,
     position: 'Full Stack Developer ',
     text: [
-      'Migrating an old Angular-based admin panel to React. Improving the current system and adding new features to improve accessibility and workflow.',
-      'Delivered multiple front-end and full-stack applications by identifying client and business requirements and software implementation using technologies such as React/Next/Node/AWS/Shopify, etc.',
+      'Migrated an old Angular-based admin panel to React, improving the overall user experience and scaling to add new features. This helped a client grow their business further and also increased accessibility for the end users.',
+      'Delivered multiple front-end and full-stack applications by identifying client and business requirements and software implementation using React/Next/Node/AWS/Shopify, etc.',
       'Worked on creating an external Shopify App using Shopify Admin APIs and Shopify Polaris.',
-      'Worked on improving a Shopify plugin and made CSS transitions for product catalogs for all the free themes'
-    ],
-    from: 'Dec 2020 '
+      'Developed a Shopify plugin using Shopify Admin APIs and Shopify Polaris to add custom animations and styles on product listings on Shopify.'
+    ]
   },
 
   {
     company: 'Robor',
+    from: 'Dec 2021',
     to: 'Apr 2022',
     order: 2,
     position: 'Junior Full Stack Developer',
     description:
       'At Robor, I worked on different technologies including Next Js, React, Agoric, Node, etc. ',
     text: [
-      'Developed a baseball card NFT marketplace dapp for Agoric. Agoric is a framework that utilizes javascript to develop secure smart contracts.',
+      'Developed a baseball card NFT marketplace dapp for Agoric. Agoric is a framework that utilizes JavaScript to develop secure smart contracts. (Open source project)',
       'Used Next JS, TypeScript, and Tailwind CSS to develop the complete UI for Kontractory, an online law firm that provides contracts and support for various legal matters. Followed the best practices and conventions to develop the UI.'
-    ],
-    from: 'Dec 2021 '
+    ]
   },
   {
     company: 'EasyPaisa',
